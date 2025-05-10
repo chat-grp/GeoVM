@@ -1,0 +1,3 @@
+[submodule "external/geovm"]
+	path = external/geovm
+	url = https://github.com/crocodiledundalk/geovm
