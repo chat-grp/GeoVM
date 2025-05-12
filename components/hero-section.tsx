@@ -1,4 +1,5 @@
 import Link from "next/link"
+import Image from 'next/image';
 import { ArrowRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
@@ -18,7 +19,7 @@ export function HeroSection() {
               <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl">
                 GeoSVM: planetary sharded SVM
                 <span className="block text-teal-600 dark:text-teal-400">
-                  inherently designed for Earth's geography
+                  inherently designed for Earth&apos;s geography
                 </span>
               </h1>
               <p className="max-w-[600px] text-gray-500 md:text-xl dark:text-gray-400">
@@ -41,10 +42,12 @@ export function HeroSection() {
           <div className="relative mx-auto lg:mr-0">
             <div className="relative h-[400px] w-[400px] sm:h-[500px] sm:w-[500px]">
               <div className="absolute inset-0 rounded-full bg-gradient-to-br from-teal-200 to-blue-200 dark:from-teal-900/30 dark:to-blue-900/30 blur-3xl opacity-70" />
-              <img
+              <Image
                 src="/3d-globe-mesh.png"
                 alt="GeoSVM Globe Visualization"
-                className="relative z-10 h-full w-full object-contain"
+                className="relative z-10 object-contain"
+                layout="fill"
+                priority
               />
             </div>
           </div>

@@ -187,7 +187,7 @@ export function GlobeSection() {
                 <div className="flex-1">
                   {currentFeature === 0 && (
                     <p className="text-gray-500 dark:text-gray-400">
-                      The Hierarchical Triangular Mesh (HTM) divides Earth's surface into triangular cells (trixels)
+                      The Hierarchical Triangular Mesh (HTM) divides Earth&apos;s surface into triangular cells (trixels)
                       that can be perfectly subdivided, creating a consistent geometric hierarchy.
                     </p>
                   )}

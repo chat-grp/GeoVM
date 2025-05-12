@@ -6,7 +6,7 @@ import { useMarketplace } from "@/components/marketplace/marketplace-provider"
 import { formatCurrency } from "@/lib/marketplace/marketplace-utils"
 
 export function OwnershipDashboard() {
-  const { ownedTrixels, totalRevenue, walletBalance } = useMarketplace()
+  const { ownedTrixels, totalRevenue } = useMarketplace()
 
   // Calculate total investment value
   const totalInvestment = ownedTrixels.reduce((sum, trixel) => sum + trixel.price, 0)
@@ -94,7 +94,7 @@ export function OwnershipDashboard() {
           </div>
         ) : (
           <div className="text-center py-8 text-gray-500 dark:text-gray-400">
-            You don't own any trixels yet. Start investing to build your portfolio!
+            You don&apos;t own any trixels yet. Start investing to build your portfolio!
           </div>
         )}
       </CardContent>

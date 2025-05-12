@@ -27,7 +27,7 @@ export function Footer() {
               <span className="font-bold">{siteConfig.name}</span>
             </div>
             <p className="text-sm text-gray-500 dark:text-gray-400">
-              A decentralized synchronized state machine inherently designed for Earth's geography.
+              A decentralized synchronized state machine inherently designed for Earth&apos;s geography.
             </p>
             <div className="flex space-x-4">
               {siteConfig.socials.map((social) => {

@@ -1,4 +1,5 @@
 import { Shield, SquareSplitVerticalIcon as SplitSquare, Network, Layers } from "lucide-react"
+import Image from 'next/image';
 
 import { siteConfig } from "@/lib/constants"
 import { Card, CardContent } from "@/components/ui/card"
@@ -20,7 +21,7 @@ export function AboutSection() {
           </h2>
           <p className="mt-4 text-gray-500 dark:text-gray-400 md:text-lg">
             GeoSVM transforms location into a verifiable, economically meaningful primitive, resolving the geospatial
-            "blind spot" of existing blockchains.
+            &quot;blind spot&quot; of existing blockchains.
           </p>
         </div>
 
@@ -48,13 +49,17 @@ export function AboutSection() {
               <div className="bg-gradient-to-br from-teal-50 to-blue-50 dark:from-teal-950/30 dark:to-blue-950/30 p-8">
                 <h3 className="text-2xl font-bold mb-4">Key Innovation: Merkle-Sierpiński State Tree</h3>
                 <p className="text-gray-600 dark:text-gray-300 mb-6">
-                  GeoSVM's state tree is structured as a hierarchical triangular mesh (HTM), enabling perfect geometric
+                  GeoSVM&apos;s state tree is structured as a hierarchical triangular mesh (HTM), enabling perfect geometric
                   subdivisions and ancestry tracking.
                 </p>
-                <img
+                {/* TODO: Replace placeholder width and height with actual image dimensions for optimal performance and aspect ratio. */}
+                <Image
                   src="/hierarchical-triangular-mesh-merkle-tree.png"
                   alt="Merkle-Sierpiński State Tree Infographic"
-                  className="rounded-lg w-full h-auto shadow-lg"
+                  className="rounded-lg shadow-lg" // w-full and h-auto are effectively handled by responsive layout and parent
+                  width={1200} // Placeholder: Verify image aspect ratio
+                  height={800} // Placeholder: Verify image aspect ratio
+                  layout="responsive"
                 />
               </div>
             </CardContent>

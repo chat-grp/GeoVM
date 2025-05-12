@@ -68,12 +68,12 @@ export function MarketplaceProvider({ children }: { children: React.ReactNode })
     }, 5000)
 
     return () => clearInterval(interval)
-  }, [])
+  }, [ownedTrixels])
 
   // Update revenue when owned trixels change
   useEffect(() => {
     // This simulates revenue accumulation based on owned trixels
-    const interval = setInterval(() => {
+    const intervalId = setInterval(() => {
       if (ownedTrixels.length > 0) {
         setTotalRevenue((prev) => {
           const increment = ownedTrixels.reduce((sum, trixel) => sum + trixel.potentialEarnings * 0.01, 0)
@@ -82,7 +82,7 @@ export function MarketplaceProvider({ children }: { children: React.ReactNode })
       }
     }, 5000)
 
-    return () => clearInterval(interval)
+    return () => clearInterval(intervalId)
   }, [ownedTrixels])
 
   const selectTrixel = (id: string) => {
